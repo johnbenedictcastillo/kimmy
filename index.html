@@ -19,6 +19,10 @@
         <script>
 
             // growing-up Video Handler
+	    const ua = navigator.userAgent
+		    let pattern = /Android/;
+                    let result = pattern.test(ua);
+
             
             AFRAME.registerComponent('video-vidhandler', {
                 init: function() {
@@ -26,12 +30,10 @@
                     this.vid = document.querySelector("#growing-up");
 		    this.videoPlane = document.querySelector("#video-plane");
                     this.vid.pause();
-		    const ua = navigator.userAgent
-		    let pattern = /Android/;
-                    let result = pattern.test(ua);
+
 		  if (result) {
-		    //this.vid.muted = false
-	            this.vid.setAttribute("mute",false);
+		    this.vid.muted = false
+	            //this.vid.setAttribute("mute",false);
 		  }
                 },
                 tick: function() {
