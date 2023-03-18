@@ -30,7 +30,8 @@
 		    let pattern = /Android/;
                     let result = pattern.test(ua);
 		  if (result) {
-		    this.vid.muted = false
+		    //this.vid.muted = false
+	            this.vid.setAttribute("mute",false);
 	             alert('unmute')
 		  }
                 },
