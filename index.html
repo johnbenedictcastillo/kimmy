@@ -26,6 +26,10 @@
                     this.vid = document.querySelector("#growing-up");
 		    this.videoPlane = document.querySelector("#video-plane");
                     this.vid.pause();
+		    const ua = navigator.userAgent
+		  if (/android/i.test(ua)) {
+		    his.vid.muted = false
+		  }
                 },
                 tick: function() {
                     if (this.el.object3D.visible == true) {
@@ -60,7 +64,7 @@
 
                 <!-- growing-up  Video -->
                 
-                <video crossorigin="anonymous" type="video/mp4" preload="auto" id="growing-up" autoplay webkit-playsinline playsinline controls timeout="30000">
+                <video crossorigin="anonymous" type="video/mp4" preload="auto" id="growing-up" muted autoplay webkit-playsinline playsinline controls timeout="30000">
 			<source  type="video/mp4"src="https://ftp.se.phyron.com/demo/test/vid.mp4">
 			<source  type="video/mp4" src="https://www.googleapis.com/drive/v3/files/1Imfy6AMiSP0DGgVQW7138LLgiGc5zC0d?alt=media&key=AIzaSyBOPXy0Tgn2tNRjq-HGkAbQaIs1PDRDvuM">
                 </video>
