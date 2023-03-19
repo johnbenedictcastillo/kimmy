@@ -34,6 +34,8 @@
 		  if (result) {
 		    this.vid.muted = false
 	            //this.vid.setAttribute("mute",false);
+		  }else{
+	             this.vid.setAttribute('position', {x: 270, y: -100, z: 0});
 		  }
                 },
                 tick: function() {
